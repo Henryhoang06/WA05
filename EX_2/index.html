@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .special{
+        background-color:pink;
+
+    }
+    #hello{
+        font-weight: bold;
+    }
+    h2{
+        text-decoration:underline;
+    }
+    img{
+        margin:0 50px;
+    }
+</style>
+<body>
+    <h1 id='special'>Hi im Dũng</h1>
+    <h2 id='specialx'>Im 14 years old</h2>
+    <p id='hello'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nisi itaque quis. Libero, alias voluptas, exercitationem, quas eaque nam nobis atque quidem corporis sapiente qui dolorum commodi. Sapiente, optio! Provident!</p>
+    <a href='https://developer.mozilla.org/vi/docs/Learn/Getting_started_with_the_web/JavaScript_basics'>Hello to javascript</a>
+    <img src='https://images.ctfassets.net/hrltx12pl8hq/4f6DfV5DbqaQUSw0uo0mWi/ff068ff5fc855601751499d694c0111a/shutterstock_376532611.jpg?fit=fill&w=800&h=300'>
+    <hr>
+    <button onclick="lala()">Chang Style</button>
+    <button onclick="haha()">Default Style</button>
+    <button onclick="orange()">Background Cam</button>
+    <button onclick="yellow()">Background thường</button>
+    <br>
+    <!-- <form id="myForm" action="/action_page.php">
+       Radius : <input type="text" name="lename"><br><br>
+        <input type="button" onclick="myFunction()" value="Submit">
+      </form> -->
+      
+    <script>
+        // let a=prompt("What is your name?");
+        // console.log("Xin chào ",a);
+        console.dir(hello)
+        
+        function haha(){
+            let b=document.getElementById('hello').style='null'
+        }
+        function lala(){
+            let b=document.getElementById('hello').style
+        b.color='purple';
+        b.textDecoration='underline';
+        b.backgroundColor='lightBlue';
+        b.fontStyle='Italic';
+        b.fontFamily='SansSerif';
+        b.fontsize='10px';
+        }
+        function orange(){
+            document.body.style.backgroundColor = "orange";
+        }
+        function yellow(){
+            document.body.style.backgroundColor='white'
+        }
+        // function myFunction() {
+        //     document.getElementById("myForm").submit();
+        //     let a=4/3*3.14*myFunction**3
+        //     console.log('VOLUME IS ',a);
+        // }
+        let a=prompt("Radius ")
+        let b=4/3*3.14*a**3
+        console.log('VOLUME IS ',b);
+    </script> 
+</body>
+
+</html>
