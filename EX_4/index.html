@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .special{
+        background-color:pink;
+
+    }
+    #hello{
+        font-weight: bold;
+    }
+    h2{
+        text-decoration:underline;
+    }
+    img{
+        margin:0 50px;
+    }
+    button{
+        width:100%;
+        height:100%;
+    }
+    input{
+        height:100%;
+        width:95%;
+    }
+    h1{
+
+    }
+</style>
+<body>
+    <!-- <h1 id='special'>Hi im Dũng</h1>
+    <h2 id='specialx'>Im 14 years old</h2>
+    <p id='hello'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nisi itaque quis. Libero, alias voluptas, exercitationem, quas eaque nam nobis atque quidem corporis sapiente qui dolorum commodi. Sapiente, optio! Provident!</p>
+    <a href='https://developer.mozilla.org/vi/docs/Learn/Getting_started_with_the_web/JavaScript_basics'>Hello to javascript</a>
+    <img src='https://images.ctfassets.net/hrltx12pl8hq/4f6DfV5DbqaQUSw0uo0mWi/ff068ff5fc855601751499d694c0111a/shutterstock_376532611.jpg?fit=fill&w=800&h=300'>
+    <hr>
+    <button onclick="lala()">Chang Style</button>
+    <button onclick="haha()">Default Style</button>
+    <button onclick="orange()">Background Cam</button>
+    <button onclick="yellow()">Background thường</button>
+    <br> -->
+    <!-- <form id="myForm" action="/action_page.php">
+       Radius : <input type="text" name="lename"><br><br>
+        <input type="button" onclick="myFunction()" value="Submit">
+      </form> -->
+      <h1>Máy tính cầm tay</h1>
+      <table border="1" style='width:50%;'>
+        <tr>
+            <th colspan="3"><input id='result' type='text'></th>
+            <th><button onclick=''>clear</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="display(7)">7</button></th>
+            <th><button onclick="display(8)">8</button></th>
+            <th><button onclick="display(9)">9</button></th>
+            <th><button onclick="setOpearator('*')">x</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="display(4)">4</button></th>
+            <th><button onclick="display(5)">5</button></th>
+            <th><button onclick="display(6)">6</button></th>
+            <th><button onclick="setOpearator('/')">/</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="display(1)">1</button></th>
+            <th><button onclick="display(2)">2</button></th>
+            <th><button onclick="display(3)">3</button></th>
+            <th><button onclick="setOpearator('+')">+</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="display(0)">0</button></th>
+            <th><button onclick="display('.')">.</button></th>
+            <th><button onclick="tinhtoan()">=</button></th>
+            <th><button onclick="setOpearator('-')">-</button></th>
+        </tr>
+        </table>
+    <!-- <script>
+        SỐ ĐẦU TIÊN + toán tử (+,-,*,/) + SỐ THỨ 2 = kết quả
+        let sodautien
+        let toantu
+        let sothuhai
+           
+            1.Khi nhập một số thì số đó sẽ hiện lên số đã nhập
+            2.Lưu số hiện tại vào biến số thứ nhất
+            3.Kiểm tra nút nhấn có là toán tử hay không thì sẽ xóa số đã hiện, và hiện toán tử đó
+            4.Lưu toán tử đang nghiệm vào biến toán tử
+            5.Lưu thông tin của số đang hiện vào biến số thứ 2
+            6.Tạo một biến kết quả bằng 0 để lưu kết quả
+            7.Kiểm tra toán tử
+            8.Nếu toán tử == "+" thì ta thực hiên phép cộng (tương tự các dấu còn lại)
+            9.Cho hiện phần nội dung của biến kết quả
+    </script>  -->
+    <script>
+        let sodautien;
+        let toantu;
+        let sothuhau;
+        let display = function(n){
+            let result = document.getElementById('result');
+            if(result.value == "+" || result.value == "-" || result.value == "*"|| result.value == "/"){
+                result.value="";
+            };
+            result.value += n;
+        }
+
+        let setOpearator = function(n){
+            let result = document.getElementById('result');
+            sodautien = result.value;
+            result.value = n;
+            toantu = n;
+        }
+
+        let tinhtoan = function(){
+            let result =document.getElementById('result');
+            sothuhai = result.value;
+            let ketqua = 0;
+            sodautien=parseFloat(sodautien);
+            sothuhai=parseFloat(sothuhai);
+            if(toantu == "+"){
+                ketqua = sodautien + sothuhai;
+            }
+            if(toantu == "-"){
+                ketqua = sodautien - sothuhai;
+            }
+            if(toantu == "*"){
+                ketqua = sodautien * sothuhai;
+            }
+            if(toantu = "/"){
+                ketqua = sodautien / sothuhai;
+            }
+            result.value = ketqua;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
